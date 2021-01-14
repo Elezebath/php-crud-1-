@@ -90,13 +90,17 @@ if(isset($_SESSION["user_id"]))
 ?>
 
 <h1>Adding Profile for <?php echo $_SESSION["name"];?></h1>
+<hr><div class="error_block">
 <?php  
     if(isset($_SESSION['error']))  
     {  
-        echo '<label class="error">'.$_SESSION['error'].'</label>'; 
-		unset($_SESSION['error']);
-    }  
-?> 
+        echo '<label class="error" style="color:black;">'.$_SESSION['error'].'</label>';
+		//unset($_SESSION['error']);
+	} 
+
+	
+?>
+</div><hr>
 <form method="POST" action="add.php">
 <label for="frist_name" >Frist Name :</label>
 <input type="text" name="first_name" id="f_name" style="width:500px;" ><br/><br/>
