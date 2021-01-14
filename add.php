@@ -95,7 +95,7 @@ if(isset($_SESSION["user_id"]))
     if(isset($_SESSION['error']))  
     {  
         echo '<label class="error" style="color:black;">'.$_SESSION['error'].'</label>';
-		//unset($_SESSION['error']);
+	unset($_SESSION['error']);
 	} 
 
 	
